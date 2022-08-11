@@ -1,0 +1,37 @@
+.navbar {
+  min-height: 10rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar__container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+.navbar__container__logo {
+  width: 22.6rem;
+  height: 6.1rem;
+  padding-right: 3rem;
+}
+.navbar__container__list {
+  display: flex;
+  align-items: center;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  justify-content: space-between;
+  font-size: 4rem;
+  width: 100%;
+  font-weight: 400;
+  font-family: koulen;
+}
+.navbar__container__list__item {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}/*# sourceMappingURL=Navbar.css.map */

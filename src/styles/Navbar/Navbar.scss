@@ -1,0 +1,71 @@
+$magnifier-icon: url("../../files/magnifier-icon.svg");
+.navbar {
+  min-height: 10rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: min-content;
+    &__logo {
+      width: 19rem;
+      height: 5.5rem;
+      margin-right: 1rem;
+    }
+    &__list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: min-content;
+      font-size: 2.5rem;
+      font-weight: 400;
+      font-family: koulen;
+      &__item {
+        height: min-content;
+        margin: 0rem 2rem;
+      }
+    }
+    &__search-bar {
+      display: flex;
+      position: relative;
+      width: 14rem;
+      height: 2.2rem;
+      padding-left: 1rem;
+      margin-bottom: 0.23rem;
+      &__input {
+        border: 0.1rem solid black;
+        border-radius: 4px;
+        width: 100%;
+        height: 2rem;
+        border-radius: 5px;
+      }
+      &__button {
+        display: flex;
+        position: absolute;
+        background: none;
+        border: none;
+        top: 0.25rem;
+        left: 12rem;
+        &__magnifier-icon {
+          width: 1.8rem;
+        }
+      }
+    }
+    &__user-icon {
+      width: 3rem;
+      height: 2.6rem;
+      margin-left: 1.5rem;
+      margin-bottom: 0.2rem;
+    }
+    &__shopping-cart-icon {
+      width: 3rem;
+      height: 2.7rem;
+      margin-left: 1rem;
+      margin-bottom: 0.15rem;
+    }
+  }
+}
