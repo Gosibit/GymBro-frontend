@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ChangeEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import magnifierIcon from "../files/magnifier-icon.svg";
 import useComponentVisible from "../hooks/useComponentVisible";
 import "../styles/SearchBar/SearchBar.css";
@@ -48,7 +48,7 @@ function SearchBar() {
               <li className="search-bar__items__item" key={el._id}>
                 <img
                   className="search-bar__items__item__image"
-                  src={el.imageUrl}
+                  src={el.imageUrls.thumbnail}
                 />
                 {el.title}
               </li>

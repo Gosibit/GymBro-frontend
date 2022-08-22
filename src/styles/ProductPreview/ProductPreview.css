@@ -1,0 +1,7 @@
+.product-preview {
+  display: flex;
+}
+.product-preview__text-wrapper {
+  display: flex;
+  justify-content: space-between;
+}/*# sourceMappingURL=ProductPreview.css.map */

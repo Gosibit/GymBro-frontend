@@ -5,15 +5,14 @@ $magnifier-icon: url("../../files/magnifier-icon.svg");
   display: flex;
   justify-content: center;
   align-items: center;
-  &__container {
+  &__wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: min-content;
     &__logo {
-      width: 19rem;
-      height: 5.5rem;
+      width: 25rem;
       margin-right: 1rem;
     }
     &__list {
@@ -21,7 +20,7 @@ $magnifier-icon: url("../../files/magnifier-icon.svg");
       align-items: center;
       justify-content: space-between;
       height: min-content;
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-weight: 400;
       font-family: koulen;
       &__item {
@@ -31,13 +30,13 @@ $magnifier-icon: url("../../files/magnifier-icon.svg");
     }
     &__user-icon {
       width: 3rem;
-      height: 2.6rem;
+      height: 3.6rem;
       margin-left: 1.5rem;
       margin-bottom: 0.2rem;
     }
     &__shopping-cart-icon {
       width: 3rem;
-      height: 2.7rem;
+      height: 3.7rem;
       margin-left: 1rem;
       margin-bottom: 0.15rem;
     }

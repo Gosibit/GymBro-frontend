@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
 }
-.navbar__container {
+.navbar__wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,37 +14,36 @@
   height: -moz-min-content;
   height: min-content;
 }
-.navbar__container__logo {
-  width: 19rem;
-  height: 5.5rem;
+.navbar__wrapper__logo {
+  width: 25rem;
   margin-right: 1rem;
 }
-.navbar__container__list {
+.navbar__wrapper__list {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 400;
   font-family: koulen;
 }
-.navbar__container__list__item {
+.navbar__wrapper__list__item {
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
   margin: 0rem 2rem;
 }
-.navbar__container__user-icon {
+.navbar__wrapper__user-icon {
   width: 3rem;
-  height: 2.6rem;
+  height: 3.6rem;
   margin-left: 1.5rem;
   margin-bottom: 0.2rem;
 }
-.navbar__container__shopping-cart-icon {
+.navbar__wrapper__shopping-cart-icon {
   width: 3rem;
-  height: 2.7rem;
+  height: 3.7rem;
   margin-left: 1rem;
   margin-bottom: 0.15rem;
 }/*# sourceMappingURL=Navbar.css.map */

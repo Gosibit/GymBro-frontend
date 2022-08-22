@@ -1,10 +1,10 @@
 .search-bar {
   display: flex;
   position: relative;
-  width: 14rem;
+  width: 19rem;
   height: 2.2rem;
   padding-left: 1rem;
-  margin-bottom: 0.23rem;
+  margin-bottom: 0.8rem;
   /* Track */
   /* Handle */
   /* Handle on hover */
@@ -28,7 +28,7 @@
   border: 0.1rem solid black;
   border-radius: 4px;
   width: 100%;
-  height: 2rem;
+  height: 2.5rem;
   border-radius: 5px;
 }
 .search-bar__button {
@@ -36,36 +36,38 @@
   position: absolute;
   background: none;
   border: none;
-  top: 0.25rem;
-  left: 12rem;
+  top: 0.4rem;
+  left: 17rem;
 }
 .search-bar__button__magnifier-icon {
   width: 1.8rem;
 }
 .search-bar__items {
   display: flex;
+  font-family: Koulen;
   flex-direction: column;
-  min-height: 8rem;
-  max-height: 12rem;
-  width: 100%;
+  min-height: 5rem;
+  max-height: 15rem;
+  width: 130%;
   overflow-y: auto;
   overflow-x: hidden;
   position: absolute;
   padding-bottom: 0.5rem;
   right: 0%;
   border: 1px solid rgb(216, 216, 216);
-  font-size: 1.3rem;
-  top: 120%;
+  font-size: 2rem;
+  top: 140%;
+  background-color: white;
 }
 .search-bar__items__item {
-  border-bottom: 1px solid black;
+  z-index: auto;
   display: flex;
   align-items: center;
-  height: 4rem;
+  background-color: white;
+  height: 5rem;
 }
 .search-bar__items__item__image {
-  width: 5rem;
-  height: 3.5rem;
+  width: 3rem;
   margin-right: 1rem;
 }
 .search-bar__items__item:hover {
