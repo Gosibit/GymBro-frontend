@@ -2,9 +2,10 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import magnifierIcon from "../files/magnifier-icon.svg";
 import useComponentVisible from "../hooks/useComponentVisible";
+import IProduct from "../Interfaces/Product";
 import "../styles/SearchBar/SearchBar.css";
 function SearchBar() {
-  const [searchedProducts, setSearchedProducts] = useState([]);
+  const [searchedProducts, setSearchedProducts] = useState<IProduct[]>([]);
   const { ref, isComponentVisible } = useComponentVisible(false);
   const searchProducts = async (title: string) => {
     try {
@@ -43,14 +44,14 @@ function SearchBar() {
       </button>
       {isComponentVisible && (
         <ul className="search-bar__items">
-          {searchedProducts.map((el: any) => {
+          {searchedProducts.map((product: IProduct) => {
             return (
-              <li className="search-bar__items__item" key={el._id}>
+              <li className="search-bar__items__item" key={product._id}>
                 <img
                   className="search-bar__items__item__image"
-                  src={el.imageUrls.thumbnail}
+                  src={product.imageUrls.thumbnail}
                 />
-                {el.title}
+                {product.title}
               </li>
             );
           })}

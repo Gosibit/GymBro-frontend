@@ -1,0 +1,11 @@
+$background: url("../../files/new-t-shirts.png");
+
+.landscape-image {
+  width: 116rem;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  &__image {
+    width: 116rem;
+  }
+}

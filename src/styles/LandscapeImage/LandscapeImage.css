@@ -1,0 +1,9 @@
+.landscape-image {
+  width: 116rem;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+}
+.landscape-image__image {
+  width: 116rem;
+}/*# sourceMappingURL=LandscapeImage.css.map */

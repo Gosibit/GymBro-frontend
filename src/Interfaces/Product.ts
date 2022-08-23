@@ -19,6 +19,8 @@ export interface IProduct {
     original: string;
     thumbnail: string;
   };
+  __v: number;
+  _id: string;
 }
 
 export default IProduct;

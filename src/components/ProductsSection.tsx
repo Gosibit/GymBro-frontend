@@ -1,9 +1,18 @@
+import IProduct from "../Interfaces/Product";
 import "../styles/ProductsSection/ProductsSection.scss";
-function ProductsSection(products: any) {
+import ProductPreview from "./ProductPreview";
+function ProductsSection(products: IProduct[]) {
+  console.log(products);
+  console.log("xd");
   return (
     <section className="products-section">
+      <h2>BESTSELLERS</h2>
       <div className="products-section__wrapper">
-        <h1>BESTSELLERS</h1>
+        {Object.values(products).map((product: IProduct) => {
+          return (
+            <ProductPreview key={product._id} {...product}></ProductPreview>
+          );
+        })}
         <div className="products-section_product"></div>
       </div>
     </section>

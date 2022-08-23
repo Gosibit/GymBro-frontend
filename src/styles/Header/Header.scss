@@ -9,7 +9,7 @@ $background: url("../../files/new-t-shirts.png");
     width: 116rem;
     height: 30rem;
     background-size: 116rem 30rem;
-    background-image: url("../../files/new-t-shirts.png");
+    background-image: $background;
     display: flex;
     justify-content: center;
     // align-items: center;
