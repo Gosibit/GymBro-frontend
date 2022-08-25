@@ -10,7 +10,9 @@ function ProductPreview(product: IProduct) {
       ></img>
       <div className="product-preview__text-wrapper">
         <span>{product.title}</span>
-        <span>{product.price}</span>
+        <span className="product-preview__text-wrapper__price">
+          {product.price}
+        </span>
       </div>
     </article>
   );

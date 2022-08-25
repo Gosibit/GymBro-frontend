@@ -1,0 +1,32 @@
+.footer {
+  border-top: 1px solid #ebebeb;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+  &__text-wrapper {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: Koulen;
+    margin-top: 1rem;
+    &__text {
+      margin-right: 1rem;
+    }
+  }
+  &__social-wrapper {
+    display: flex;
+    width: 60%;
+    font-family: Koulen;
+    margin-top: 1rem;
+    &__image {
+      width: 3.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

@@ -15,5 +15,6 @@
 .products-section__wrapper {
   width: 116rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }/*# sourceMappingURL=ProductsSection.css.map */

@@ -1,1 +1,1 @@
-{"version":3,"sources":["ProductPreview.scss","ProductPreview.css"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,mBAAA;ACCF;ADAE;EACE,YAAA;ACEJ;ADAE;EACE,aAAA;EACA,UAAA;EACA,8BAAA;ACEJ","file":"ProductPreview.css"}
+{"version":3,"sources":["ProductPreview.scss","ProductPreview.css"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,UAAA;EACA,sBAAA;EACA,mBAAA;EACA,mBAAA;EACA,kBAAA;ACCF;ADAE;EACE,YAAA;ACEJ;ADAE;EACE,aAAA;EACA,sBAAA;EACA,UAAA;EACA,mBAAA;EACA,gBAAA;ACEJ;ADDI;EACE,iBAAA;ACGN;ADFM;EACE,YAAA;EACA,mBAAA;ACIR","file":"ProductPreview.css"}
