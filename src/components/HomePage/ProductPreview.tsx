@@ -1,5 +1,5 @@
-import IProduct from "../Interfaces/Product";
-import "../styles/ProductPreview/ProductPreview.css";
+import IProduct from "../../Interfaces/IProduct";
+import "../../styles/ProductPreview/ProductPreview.css";
 
 function ProductPreview(product: IProduct) {
   return (

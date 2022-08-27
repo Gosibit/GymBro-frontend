@@ -4,6 +4,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer__wrapper">
+        <img className="footer__wrapper__logo" src={logo} alt="gymbro logo" />
         <div className="footer__text-wrapper">
           <span>E-mail</span>
           <span>Phone</span>
@@ -39,7 +40,6 @@ function Footer() {
             ></img>
           </a>
         </div>
-        <img className="footer__wrapper__logo" src={logo} alt="gymbro logo" />
       </div>
     </footer>
   );

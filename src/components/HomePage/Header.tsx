@@ -1,4 +1,4 @@
-import "../styles/Header/Header.css";
+import "../../styles/Header/Header.css";
 
 function FirstHeader() {
   return (

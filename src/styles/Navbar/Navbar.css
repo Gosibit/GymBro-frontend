@@ -1,9 +1,11 @@
 .navbar {
-  min-height: 10rem;
+  min-height: 8rem;
+  background-color: white;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
 }
 .navbar__wrapper {
   display: flex;
@@ -13,6 +15,7 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
+  border-bottom: solid 2px #f2f2f2;
 }
 .navbar__wrapper__logo {
   width: 25rem;

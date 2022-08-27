@@ -1,5 +1,6 @@
 .first-header {
   display: flex;
+  padding-top: 9rem;
   flex-direction: column;
   align-items: center;
 }

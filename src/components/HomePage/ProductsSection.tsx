@@ -1,5 +1,5 @@
-import IProduct from "../Interfaces/Product";
-import "../styles/ProductsSection/ProductsSection.scss";
+import IProduct from "../../Interfaces/IProduct";
+import "../../styles/ProductsSection/ProductsSection.scss";
 import ProductPreview from "./ProductPreview";
 function ProductsSection(products: IProduct[]) {
   console.log(products);
