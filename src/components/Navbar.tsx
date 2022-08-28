@@ -4,8 +4,13 @@ import userIcon from "../files/user-icon.svg";
 import shoppingCartIcon from "../files/shopping-cart-icon.svg";
 import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function Navbar() {
+  const categories = ["T-Shirts", "Accessories", "Shorts"];
+  const genders = ["M", "F"];
+  const [isActive, setIsActive] = useState("xd");
+  console.log(isActive);
   return (
     <nav className="navbar">
       <div className="navbar__wrapper">
@@ -13,11 +18,43 @@ function Navbar() {
           <img className="navbar__wrapper__logo" src={logo} alt="gymbro logo" />
         </Link>
         <ul className="navbar__wrapper__list">
-          <Link to="/products?gender=Men">
-            <li className="navbar__wrapper__list__item">MAN</li>
-          </Link>
-
-          <li className="navbar__wrapper__list__item">WOMAN</li>
+          {genders.map((gender) => {
+            return (
+              <Link
+                to={"/products?gender=" + gender}
+                style={{ textDecoration: "none", color: "black" }}
+                onClick={() => setIsActive(gender)}
+              >
+                <li
+                  className={
+                    isActive[0] === gender
+                      ? "navbar__wrapper__list__item active"
+                      : "navbar__wrapper__list__item"
+                  }
+                  key={gender}
+                >
+                  {gender === "M" ? "Men" : "Women"}
+                  <ul className="navbar__wrapper__list__item__dropdown">
+                    {categories.map((category) => {
+                      return (
+                        <li key={gender + category}>
+                          <Link
+                            style={{ textDecoration: "none", color: "black" }}
+                            to={`/products?gender=${gender}&category=${category}`}
+                            onClick={() => {
+                              setIsActive(`${gender}${category}`);
+                            }}
+                          >
+                            {category}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </li>
+              </Link>
+            );
+          })}
           <li className="navbar__wrapper__list__item">ACCESSORIES</li>
           <li className="navbar__wrapper__list__item">SALES</li>
           <li className="navbar__wrapper__list__item">ABOUT US</li>

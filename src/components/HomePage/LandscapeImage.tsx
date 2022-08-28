@@ -1,5 +1,5 @@
-import "../styles/LandscapeImage/LandscapeImage.css";
-import sunglassesLandscape from "../files/sunglasses-landscape.png";
+import "../../styles/HomePage/LandscapeImage/LandscapeImage.css";
+import sunglassesLandscape from "../../files/sunglasses-landscape.png";
 
 function LandscapeImage(landscapeImage: any) {
   return (

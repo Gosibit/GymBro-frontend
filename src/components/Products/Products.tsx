@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import IProduct from "../Interfaces/IProduct";
-import "../styles/Products/Products.css";
+import IProduct from "../../Interfaces/IProduct";
+import "../../styles/Products/Products.css";
 
 function ProductsList() {
   const [searchParams, setSearchParams] = useSearchParams({});
@@ -26,13 +26,15 @@ function ProductsList() {
       }
     };
     searchProducts();
+    console.log(params);
   }, [params]);
 
   useEffect(() => {
+    setParams({});
     searchParams.forEach((value: string, key: string) => {
       setParams((params: any) => ({ ...params, [key]: value }));
     });
-  }, []);
+  }, [searchParams]);
 
   return (
     <div className="products">

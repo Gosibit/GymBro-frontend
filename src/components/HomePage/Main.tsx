@@ -1,9 +1,9 @@
 import ProductsSection from "./ProductsSection";
-import "../../styles/Main/Main.css";
+import "../../styles/HomePage/Main/Main.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import IProduct, { Category } from "../../Interfaces/IProduct";
-import LandscapeImage from "../LandscapeImage";
+import LandscapeImage from "./LandscapeImage";
 import sunglassesLandscape from "../../files/sunglasses-landscape.png";
 
 function Main() {

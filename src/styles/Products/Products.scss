@@ -13,22 +13,25 @@
       display: flex;
       justify-content: center;
       margin-bottom: 3rem;
+      border: 2px solid #f2f2f2;
+      border-radius: 2px;
       &__info {
         display: flex;
         width: 100%;
         margin-top: 1rem;
         justify-content: space-between;
         &__title {
-          font-size: 2.5rem;
+          font-size: 3.5rem;
           margin-left: 3rem;
           font-family: Koulen;
         }
         &__price {
-          font-size: 2.5rem;
+          font-size: 3rem;
           font-family: Koulen;
           &::after {
             content: "$";
             padding-left: 4px;
+            margin-right: 1rem;
           }
         }
         &__button {
