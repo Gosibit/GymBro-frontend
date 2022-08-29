@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import magnifierIcon from "../files/magnifier-icon.svg";
 import useComponentVisible from "../hooks/useComponentVisible";
 import IProduct from "../Interfaces/IProduct";
@@ -46,13 +47,15 @@ function SearchBar() {
         <ul className="search-bar__items">
           {searchedProducts.map((product: IProduct) => {
             return (
-              <li className="search-bar__items__item" key={product._id}>
-                <img
-                  className="search-bar__items__item__image"
-                  src={product.imageUrls.thumbnail}
-                />
-                {product.title}
-              </li>
+              <Link to={`/products/${product._id}`} className="Link">
+                <li className="search-bar__items__item" key={product._id}>
+                  <img
+                    className="search-bar__items__item__image"
+                    src={product.imageUrls.thumbnail}
+                  />
+                  {product.title}
+                </li>
+              </Link>
             );
           })}
           {searchedProducts.length === 0 && (

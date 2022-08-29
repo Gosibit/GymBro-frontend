@@ -46,8 +46,8 @@
   display: flex;
   font-family: Koulen;
   flex-direction: column;
-  min-height: 5rem;
-  max-height: 8rem;
+  min-height: 7rem;
+  max-height: 12rem;
   width: 130%;
   overflow-y: auto;
   overflow-x: hidden;
@@ -64,6 +64,7 @@
   display: flex;
   align-items: center;
   background-color: white;
+  width: 100%;
   padding: 0.5rem 0rem;
 }
 .search-bar__items__item__image {

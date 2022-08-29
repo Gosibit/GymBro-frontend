@@ -35,6 +35,7 @@ $magnifier-icon: url("../../files/magnifier-icon.svg");
           text-decoration: underline;
         }
         text-decoration: none;
+
         &:hover &__dropdown {
           display: flex;
           flex-direction: column;
@@ -43,7 +44,6 @@ $magnifier-icon: url("../../files/magnifier-icon.svg");
         }
         &__dropdown {
           position: absolute;
-          z-index: 1;
           top: 100%;
           width: 12rem;
           display: none;
@@ -55,13 +55,13 @@ $magnifier-icon: url("../../files/magnifier-icon.svg");
             margin-bottom: 1rem;
             width: 100%;
             cursor: pointer;
-            &:link,
             &:hover {
-              background-color: #f5f7ff;
-              text-decoration: none;
-            }
-            &:active {
               background-color: #f2f2f2;
+            }
+            &--active {
+              background-color: #f2f2f2;
+              margin-bottom: 1rem;
+              width: 100%;
             }
           }
         }
@@ -80,7 +80,4 @@ $magnifier-icon: url("../../files/magnifier-icon.svg");
       margin-bottom: 0.15rem;
     }
   }
-}
-.active {
-  text-decoration: underline;
 }

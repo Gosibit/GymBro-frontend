@@ -35,7 +35,7 @@
 .products__list__item__info__price::after {
   content: "$";
   padding-left: 4px;
-  margin-right: 1rem;
+  margin-right: 6rem;
 }
 .products__list__item__info__button {
   width: 100%;
