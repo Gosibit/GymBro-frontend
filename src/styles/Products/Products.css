@@ -1,0 +1,53 @@
+.products {
+  padding-top: 8rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.products__list {
+  width: 110rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.products__list__item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  border: 2px solid #f2f2f2;
+  border-radius: 2px;
+}
+.products__list__item__info {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+.products__list__item__info__title {
+  font-size: 3.5rem;
+  margin-left: 3rem;
+  font-family: Koulen;
+}
+.products__list__item__info__price {
+  font-size: 3rem;
+  font-family: Koulen;
+}
+.products__list__item__info__price::after {
+  content: "$";
+  padding-left: 4px;
+  margin-right: 6rem;
+}
+.products__list__item__info__button {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  font-size: 1.5rem;
+  font-family: Koulen;
+  cursor: pointer;
+}
+.products__list__item__image {
+  width: 20rem;
+  max-height: 35rem;
+}/*# sourceMappingURL=Products.css.map */

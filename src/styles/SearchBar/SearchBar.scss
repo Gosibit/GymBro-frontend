@@ -1,0 +1,86 @@
+.search-bar {
+  display: flex;
+  position: relative;
+  width: 19rem;
+  height: 2.2rem;
+  padding-left: 1rem;
+  margin-bottom: 0.8rem;
+
+  ::-webkit-scrollbar {
+    width: 0.6rem;
+    border-radius: 5px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  &__input {
+    border: 0.1rem solid black;
+    border-radius: 4px;
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 5px;
+  }
+  &__button {
+    display: flex;
+    position: absolute;
+    background: none;
+    border: none;
+    top: 0.4rem;
+    left: 17rem;
+    &__magnifier-icon {
+      width: 1.8rem;
+    }
+  }
+  &__items {
+    display: flex;
+    font-family: Koulen;
+    flex-direction: column;
+    min-height: 7rem;
+    max-height: 12rem;
+    width: 130%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: absolute;
+    padding-bottom: 0.5rem;
+    right: 0%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    font-size: 2.2rem;
+    top: 140%;
+    background-color: white;
+    &__item {
+      z-index: auto;
+      display: flex;
+      align-items: center;
+      background-color: white;
+      width: 100%;
+      padding: 0.5rem 0rem;
+      &__image {
+        width: 4rem;
+        margin-right: 1rem;
+      }
+      &:hover {
+        background-color: #f5f7ff;
+        cursor: pointer;
+      }
+    }
+    &__no-products {
+      margin-left: 1rem;
+      color: grey;
+    }
+  }
+}

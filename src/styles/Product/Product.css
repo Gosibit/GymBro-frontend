@@ -1,0 +1,85 @@
+.product {
+  padding-top: 10rem;
+  display: flex;
+  justify-content: center;
+}
+.product__wrapper {
+  width: 110rem;
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+  margin-top: 2rem;
+}
+.product__wrapper__image {
+  max-width: 40rem;
+  margin-right: 20px;
+  max-height: 60rem;
+}
+.product__wrapper__info {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 2rem;
+  font-size: 2rem;
+  font-family: Koulen;
+}
+.product__wrapper__info hgroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.product__wrapper__info h1 {
+  font-size: 7rem;
+  height: 7rem;
+}
+.product__wrapper__info h2 {
+  font-size: 4.5rem;
+}
+.product__wrapper__info__price {
+  font-size: 4rem;
+  margin-top: 1rem;
+}
+.product__wrapper__info__price:after {
+  content: "$";
+  margin-left: 0.5rem;
+}
+.product__wrapper__form {
+  padding-top: 2rem;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  font-family: Koulen;
+  margin-top: 1rem;
+}
+.product__wrapper__form__title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.product__wrapper__form__select {
+  width: 100%;
+  height: 4rem;
+  border: 1px solid #dddcdc;
+  border-radius: 2px;
+  font-size: 2.2rem;
+  font-family: Koulen;
+}
+.product__wrapper__form__select:focus {
+  outline: none;
+}
+.product__wrapper__form__button {
+  width: 100%;
+  height: 7rem;
+  margin-top: 4rem;
+  border: none;
+  border-radius: 2px;
+  background-color: #f2f2f2;
+  font-size: 2rem;
+  font-family: Koulen;
+  cursor: pointer;
+}
+.product__wrapper__form__button:hover {
+  background-color: #acabab;
+  transition-duration: 0.3s;
+}/*# sourceMappingURL=Product.css.map */

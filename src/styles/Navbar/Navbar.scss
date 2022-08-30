@@ -1,19 +1,21 @@
 $magnifier-icon: url("../../files/magnifier-icon.svg");
 .navbar {
-  min-height: 10rem;
+  min-height: 8rem;
+  background-color: white;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  &__container {
+  position: fixed;
+  &__wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: min-content;
+    border-bottom: solid 2px #f2f2f2;
     &__logo {
-      width: 19rem;
-      height: 5.5rem;
+      width: 25rem;
       margin-right: 1rem;
     }
     &__list {
@@ -21,49 +23,60 @@ $magnifier-icon: url("../../files/magnifier-icon.svg");
       align-items: center;
       justify-content: space-between;
       height: min-content;
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-weight: 400;
       font-family: koulen;
+
       &__item {
+        position: relative;
         height: min-content;
         margin: 0rem 2rem;
-      }
-    }
-    &__search-bar {
-      display: flex;
-      position: relative;
-      width: 14rem;
-      height: 2.2rem;
-      padding-left: 1rem;
-      margin-bottom: 0.23rem;
-      &__input {
-        border: 0.1rem solid black;
-        border-radius: 4px;
-        width: 100%;
-        height: 2rem;
-        border-radius: 5px;
-      }
-      &__button {
-        display: flex;
-        position: absolute;
-        background: none;
-        border: none;
-        top: 0.25rem;
-        left: 12rem;
-        &__magnifier-icon {
-          width: 1.8rem;
+        &--active {
+          text-decoration: underline;
+        }
+        text-decoration: none;
+
+        &:hover &__dropdown {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        &__dropdown {
+          position: absolute;
+          top: 100%;
+          width: 12rem;
+          display: none;
+          background-color: white;
+          text-align: center;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+          border-radius: 2px;
+          font-size: 2.2rem;
+          &__item {
+            margin-bottom: 1rem;
+            width: 100%;
+            cursor: pointer;
+            &:hover {
+              background-color: #f2f2f2;
+            }
+            &--active {
+              background-color: #f2f2f2;
+              margin-bottom: 1rem;
+              width: 100%;
+            }
+          }
         }
       }
     }
     &__user-icon {
       width: 3rem;
-      height: 2.6rem;
+      height: 3.6rem;
       margin-left: 1.5rem;
       margin-bottom: 0.2rem;
     }
     &__shopping-cart-icon {
       width: 3rem;
-      height: 2.7rem;
+      height: 3.7rem;
       margin-left: 1rem;
       margin-bottom: 0.15rem;
     }

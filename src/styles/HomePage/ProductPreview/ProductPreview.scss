@@ -1,0 +1,25 @@
+.product-preview {
+  display: flex;
+  width: 33%;
+  flex-direction: column;
+  align-items: center;
+  font-family: Koulen;
+  padding: 1rem 0rem;
+  &__image {
+    width: 30rem;
+  }
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    font-family: Koulen;
+    margin-top: 1rem;
+    &__price {
+      font-size: 2.3rem;
+      &:after {
+        content: "$";
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}

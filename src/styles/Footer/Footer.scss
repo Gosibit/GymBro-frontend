@@ -1,0 +1,43 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #f2f2f2;
+  &__wrapper {
+    width: 110rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 20px;
+    height: 100%;
+    &__contact-wrapper {
+      width: 60%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.8rem;
+      font-family: Koulen;
+      margin-top: 1rem;
+      &__contact {
+        margin-bottom: 3rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__social-wrapper {
+    display: flex;
+    width: 20rem;
+    justify-content: space-between;
+    font-family: Koulen;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    &__image {
+      width: 3.7rem;
+    }
+  }
+}

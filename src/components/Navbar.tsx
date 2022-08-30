@@ -1,45 +1,92 @@
-import "../styles/Navbar/Navbar.scss";
+import "../styles/Navbar/Navbar.css";
+import "../styles/Link/Link.css";
 import logo from "../files/gymbro-navbar-logo.png";
 import userIcon from "../files/user-icon.svg";
 import shoppingCartIcon from "../files/shopping-cart-icon.svg";
-import magnifierIcon from "../files/magnifier-icon.svg";
+import SearchBar from "./SearchBar";
+import { Link, useSearchParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-const essa = () => {
-  console.log(essa);
-};
 function Navbar() {
+  const categories = ["T-Shirts", "Accessories", "Shorts"];
+  const genders = ["M", "F"];
+  const [searchParams, setSearchParams] = useSearchParams({});
+  const [params, setParams] = useState<any>({});
+  useEffect(() => {
+    setParams({});
+    searchParams.forEach((value: string, key: string) => {
+      setParams((params: any) => ({ ...params, [key]: value }));
+    });
+  }, [searchParams]);
   return (
-    <div className="navbar">
-      <div className="navbar__container">
-        <img className="navbar__container__logo" src={logo} alt="gymbro logo" />
-        <ul className="navbar__container__list">
-          <li className="navbar__container__list__item">MAN</li>
-          <li className="navbar__container__list__item">WOMAN</li>
-          <li className="navbar__container__list__item">ACCESSORIES</li>
-          <li className="navbar__container__list__item">SALES</li>
-          <li className="navbar__container__list__item">ABOUT US</li>
+    <nav className="navbar">
+      <div className="navbar__wrapper">
+        <Link to="/">
+          <img className="navbar__wrapper__logo" src={logo} alt="gymbro logo" />
+        </Link>
+        <ul className="navbar__wrapper__list">
+          {genders.map((gender) => {
+            return (
+              <li
+                className={
+                  params.gender && params.gender[0] === gender
+                    ? "navbar__wrapper__list__item navbar__wrapper__list__item--active"
+                    : "navbar__wrapper__list__item"
+                }
+                key={gender}
+              >
+                <Link
+                  to={"/products?gender=" + gender}
+                  className="Link"
+                  key={gender}
+                >
+                  {gender === "M" ? "Men" : "Women"}
+                </Link>
+                <ul className="navbar__wrapper__list__item__dropdown">
+                  {categories.map((category) => {
+                    return (
+                      <li
+                        key={gender + category}
+                        className={
+                          params.gender &&
+                          params.gender[0] === gender &&
+                          params.category &&
+                          params.category === category
+                            ? "navbar__wrapper__list__item__dropdown__item--active"
+                            : "navbar__wrapper__list__item__dropdown__item"
+                        }
+                      >
+                        <Link
+                          className="Link"
+                          to={`/products?gender=${gender}&category=${category}`}
+                        >
+                          {category}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </li>
+            );
+          })}
+          <li className="navbar__wrapper__list__item" key="ACCESORIES">
+            ACCESSORIES
+          </li>
+          <li className="navbar__wrapper__list__item" key="SALES">
+            SALES
+          </li>
+          <li className="navbar__wrapper__list__item" key="ABOUT US">
+            ABOUT US
+          </li>
         </ul>
-        <div className="navbar__container__search-bar">
-          <input
-            type="text"
-            placeholder="Search"
-            onKeyUp={essa}
-            className="navbar__container__search-bar__input"
-          ></input>
-          <button className="navbar__container__search-bar__button">
-            <img
-              className="navbar__container__search-bar__button__magnifier-icon"
-              src={magnifierIcon}
-            ></img>
-          </button>
-        </div>
-        <img className="navbar__container__user-icon" src={userIcon}></img>
+        <SearchBar></SearchBar>
+        <img className="navbar__wrapper__user-icon" src={userIcon}></img>
         <img
-          className="navbar__container__shopping-cart-icon"
+          className="navbar__wrapper__shopping-cart-icon"
           src={shoppingCartIcon}
         ></img>
       </div>
-    </div>
+    </nav>
   );
 }
 
