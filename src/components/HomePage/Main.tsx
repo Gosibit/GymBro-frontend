@@ -22,7 +22,6 @@ function Main() {
         category === Category.ACCESORIES && setSummerItems(response.data);
         return response.data;
       } catch (error) {
-        console.log(error);
         return;
       }
     };

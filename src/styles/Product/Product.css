@@ -7,8 +7,8 @@
   width: 110rem;
   display: flex;
   justify-content: center;
-  padding: 0 20px;
-  margin-top: 20px;
+  padding: 0 2rem;
+  margin-top: 2rem;
 }
 .product__wrapper__image {
   max-width: 40rem;
@@ -31,11 +31,10 @@
 }
 .product__wrapper__info h1 {
   font-size: 7rem;
+  height: 7rem;
 }
 .product__wrapper__info h2 {
   font-size: 4.5rem;
-  position: absolute;
-  bottom: 70rem;
 }
 .product__wrapper__info__price {
   font-size: 4rem;

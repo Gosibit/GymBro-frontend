@@ -18,7 +18,6 @@ function Product() {
         setProduct(response.data);
         return;
       } catch (error) {
-        console.log(error);
         return;
       }
     };

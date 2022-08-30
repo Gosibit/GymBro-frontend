@@ -4,11 +4,19 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer__wrapper">
-        <img className="footer__wrapper__logo" src={logo} alt="gymbro logo" />
-        <div className="footer__text-wrapper">
-          <span>E-mail</span>
-          <span>Phone</span>
-          <span>Address</span>
+        <div className="footer__wrapper__contact-wrapper">
+          <div className="footer__wrapper__contact-wrapper__contact">
+            <span>E-mail</span>
+            <span>contact@gymbro.shop</span>
+          </div>
+          <div className="footer__wrapper__contact-wrapper__contact">
+            <span>Phone</span>
+            <span>(909) 795-0534</span>
+          </div>
+          <div className="footer__wrapper__contact-wrapper__contact">
+            <span> Address</span>
+            <span>California St #SPC 24</span>
+          </div>
         </div>
         <div className="footer__social-wrapper">
           <a href="https://www.facebook.com/">

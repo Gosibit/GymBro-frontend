@@ -10,26 +10,33 @@
   align-items: center;
   padding: 0 20px;
   margin-top: 20px;
+  height: 100%;
 }
-.footer__text-wrapper {
-  width: 30%;
+.footer__wrapper__contact-wrapper {
+  width: 60%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-family: Koulen;
   margin-top: 1rem;
 }
-.footer__text-wrapper__text {
-  margin-right: 1rem;
+.footer__wrapper__contact-wrapper__contact {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 .footer__social-wrapper {
   display: flex;
-  width: 60%;
+  width: 20rem;
+  justify-content: space-between;
   font-family: Koulen;
   margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 .footer__social-wrapper__image {
-  width: 3.5rem;
-  margin-bottom: 0.5rem;
+  width: 3.7rem;
 }/*# sourceMappingURL=Footer.css.map */

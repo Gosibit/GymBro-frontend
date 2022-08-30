@@ -1,9 +1,7 @@
 import IProduct from "../../Interfaces/IProduct";
 import "../../styles/HomePage/ProductsSection/ProductsSection.scss";
 import ProductPreview from "./ProductPreview";
-function ProductsSection(products: IProduct[]) {
-  console.log(products);
-  console.log("xd");
+function ProductsSection(products: IProduct[], title: string) {
   return (
     <section className="products-section">
       <h2>BESTSELLERS</h2>

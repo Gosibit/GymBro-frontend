@@ -6,8 +6,8 @@
     width: 110rem;
     display: flex;
     justify-content: center;
-    padding: 0 20px;
-    margin-top: 20px;
+    padding: 0 2rem;
+    margin-top: 2rem;
     &__image {
       max-width: 40rem;
       margin-right: 20px;
@@ -29,11 +29,10 @@
 
       h1 {
         font-size: 7rem;
+        height: 7rem;
       }
       h2 {
         font-size: 4.5rem;
-        position: absolute;
-        bottom: 70rem;
       }
       &__price {
         font-size: 4rem;

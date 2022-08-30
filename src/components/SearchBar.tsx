@@ -18,7 +18,6 @@ function SearchBar() {
       setSearchedProducts(response.data);
       return;
     } catch (error) {
-      console.log(error);
       return;
     }
   };

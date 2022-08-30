@@ -21,12 +21,10 @@ function ProductsList() {
         setProducts(response.data);
         return;
       } catch (error) {
-        console.log(error);
         return;
       }
     };
     searchProducts();
-    console.log(params);
   }, [params]);
 
   useEffect(() => {

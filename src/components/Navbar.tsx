@@ -13,10 +13,8 @@ function Navbar() {
   const [searchParams, setSearchParams] = useSearchParams({});
   const [params, setParams] = useState<any>({});
   useEffect(() => {
-    console.log("xd");
     setParams({});
     searchParams.forEach((value: string, key: string) => {
-      console.log(value, key);
       setParams((params: any) => ({ ...params, [key]: value }));
     });
   }, [searchParams]);
@@ -29,46 +27,46 @@ function Navbar() {
         <ul className="navbar__wrapper__list">
           {genders.map((gender) => {
             return (
-              <Link
-                to={"/products?gender=" + gender}
-                className="Link"
+              <li
+                className={
+                  params.gender && params.gender[0] === gender
+                    ? "navbar__wrapper__list__item navbar__wrapper__list__item--active"
+                    : "navbar__wrapper__list__item"
+                }
                 key={gender}
               >
-                <li
-                  className={
-                    params.gender && params.gender[0] === gender
-                      ? "navbar__wrapper__list__item navbar__wrapper__list__item--active"
-                      : "navbar__wrapper__list__item"
-                  }
+                <Link
+                  to={"/products?gender=" + gender}
+                  className="Link"
                   key={gender}
                 >
                   {gender === "M" ? "Men" : "Women"}
-                  <ul className="navbar__wrapper__list__item__dropdown">
-                    {categories.map((category) => {
-                      return (
-                        <li
-                          key={gender + category}
-                          className={
-                            params.gender &&
-                            params.gender[0] === gender &&
-                            params.category &&
-                            params.category === category
-                              ? "navbar__wrapper__list__item__dropdown__item--active"
-                              : "navbar__wrapper__list__item__dropdown__item"
-                          }
+                </Link>
+                <ul className="navbar__wrapper__list__item__dropdown">
+                  {categories.map((category) => {
+                    return (
+                      <li
+                        key={gender + category}
+                        className={
+                          params.gender &&
+                          params.gender[0] === gender &&
+                          params.category &&
+                          params.category === category
+                            ? "navbar__wrapper__list__item__dropdown__item--active"
+                            : "navbar__wrapper__list__item__dropdown__item"
+                        }
+                      >
+                        <Link
+                          className="Link"
+                          to={`/products?gender=${gender}&category=${category}`}
                         >
-                          <Link
-                            className="Link"
-                            to={`/products?gender=${gender}&category=${category}`}
-                          >
-                            {category}
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </li>
-              </Link>
+                          {category}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </li>
             );
           })}
           <li className="navbar__wrapper__list__item" key="ACCESORIES">
