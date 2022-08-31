@@ -45,7 +45,7 @@ function ProductsList() {
           >
             <li key={product._id} className="products__list__item">
               <img
-                src={product.imageUrls.original}
+                src={product.imageUrls.original.url}
                 alt={product.title}
                 className="products__list__item__image"
               />
