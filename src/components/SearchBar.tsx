@@ -50,7 +50,8 @@ function SearchBar() {
                 <li className="search-bar__items__item" key={product._id}>
                   <img
                     className="search-bar__items__item__image"
-                    src={product.imageUrls.thumbnail}
+                    src={product.imageUrls.thumbnail.url}
+                    alt={product.title}
                   />
                   {product.title}
                 </li>

@@ -28,7 +28,7 @@ function Product() {
       {product && (
         <div className="product__wrapper">
           <img
-            src={product.imageUrls.original}
+            src={product.imageUrls.original.url}
             alt={product.title}
             className="product__wrapper__image"
           />

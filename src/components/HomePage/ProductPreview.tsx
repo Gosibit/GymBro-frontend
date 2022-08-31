@@ -16,8 +16,9 @@ function ProductPreview(product: IProduct) {
         }}
       >
         <img
-          src={product.imageUrls.original}
+          src={product.imageUrls.original.url}
           className="product-preview__image"
+          alt={product.title}
         ></img>
         <div className="product-preview__text-wrapper">
           <span>{product.title}</span>

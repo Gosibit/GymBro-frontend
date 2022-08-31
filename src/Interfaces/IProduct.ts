@@ -13,13 +13,18 @@ export interface IProduct {
   title: string;
   description: string;
   price: number;
-  category: Category;
   gender: Gender;
+  category: Category;
   imageUrls: {
-    original: string;
-    thumbnail: string;
+    original: {
+      publicId: string;
+      url: string;
+    };
+    thumbnail: {
+      publicId: string;
+      url: string;
+    };
   };
-  __v: number;
   _id: string;
 }
 
