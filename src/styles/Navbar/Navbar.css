@@ -42,6 +42,7 @@
 }
 .navbar__wrapper__list__item--active {
   text-decoration: underline;
+  margin: 0rem 2rem;
 }
 .navbar__wrapper__list__item:hover .navbar__wrapper__list__item__dropdown {
   display: flex;

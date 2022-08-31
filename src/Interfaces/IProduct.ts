@@ -4,9 +4,9 @@ export enum Category {
 }
 
 export enum Gender {
-  MEN = "Men",
-  WOMEN = "Women",
-  UNISEX = "Unisex",
+  MEN = "M",
+  WOMEN = "F",
+  UNISEX = "U",
 }
 
 export interface IProduct {
