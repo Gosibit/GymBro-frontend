@@ -8,7 +8,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function Navbar() {
-  const categories = ["T-Shirts", "Accessories", "Shorts"];
+  const categories = ["T-Shirts", "Shorts"];
   const genders = ["M", "F"];
   const [searchParams, setSearchParams] = useSearchParams({});
   const [params, setParams] = useState<any>({});
@@ -69,8 +69,17 @@ function Navbar() {
               </li>
             );
           })}
-          <li className="navbar__wrapper__list__item" key="ACCESORIES">
-            ACCESSORIES
+          <li
+            className={
+              params.category && params.category === "Accessories"
+                ? "navbar__wrapper__list__item--active"
+                : "navbar__wrapper__list__item"
+            }
+            key="ACCESORIES"
+          >
+            <Link className="Link" to="products?category=Accessories">
+              ACCESSORIES
+            </Link>
           </li>
           <li className="navbar__wrapper__list__item" key="SALES">
             SALES
