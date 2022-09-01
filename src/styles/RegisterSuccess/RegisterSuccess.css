@@ -1,0 +1,12 @@
+.register-success {
+  padding-top: 20rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.register-success h1 {
+  width: 50%;
+  text-align: center;
+  font-size: 5rem;
+  color: green;
+}/*# sourceMappingURL=RegisterSuccess.css.map */

@@ -1,0 +1,56 @@
+.register {
+  h1 {
+    font-size: 3rem;
+  }
+  font-family: Koulen;
+  padding-top: 10rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10rem;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    &__input {
+      width: 100%;
+      height: 3rem;
+      font-size: 2rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      margin-top: 1.3rem;
+      &:focus {
+        outline: none;
+      }
+    }
+    &__error {
+      color: red;
+      font-size: 1.6rem;
+      height: min-content;
+      margin-bottom: 0.5rem;
+    }
+    &__button {
+      width: 100%;
+      height: 5rem;
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      border: none;
+      border-radius: 0.5rem;
+      background-color: #ffffff;
+      margin-top: 2rem;
+      color: rgb(0, 0, 0);
+      font-size: 3rem;
+      font-weight: bold;
+      cursor: pointer;
+      &:hover {
+        background-color: #d6d6d6;
+      }
+    }
+  }
+  &__tos {
+    margin-top: 3rem;
+    width: 30%;
+    font-size: 2rem;
+  }
+}
