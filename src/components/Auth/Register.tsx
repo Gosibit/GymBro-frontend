@@ -14,9 +14,9 @@ function Register() {
     setConfirmPassword("");
     setEmail("");
   };
-  async function register() {
+  function register() {
     if (isEmailValid && isPasswordValid && isConfirmPasswordValid) {
-      const response = await axios
+      axios
         .post(process.env.REACT_APP_BE_DOMAIN + "/users/register", {
           email: email,
           password: password,
@@ -59,7 +59,13 @@ function Register() {
   return (
     <div className="register">
       <h1>Register</h1>
-      <form className="register__form">
+      <form
+        className="register__form"
+        onSubmit={(e) => {
+          register();
+          e.preventDefault();
+        }}
+      >
         {isRegisterError && (
           <div className="register__form__error">
             <p>Email is already in use!</p>
@@ -105,13 +111,7 @@ function Register() {
         {!isConfirmPasswordValid && (
           <span className="register__form__error">Passwords do not match</span>
         )}
-        <button
-          type="button"
-          className="register__form__button"
-          onClick={async () => await register()}
-        >
-          Sign up
-        </button>
+        <button className="register__form__button">Sign up</button>
       </form>
       <div className="register__tos">
         By creating an account, you accept our{" "}
