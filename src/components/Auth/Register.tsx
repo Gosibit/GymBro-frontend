@@ -33,24 +33,24 @@ function Register() {
     }
   }
 
+  const validateEmail = (email: string) => {
+    const regex =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return setIsEmailValid(regex.test(String(email).toLowerCase()));
+  };
+  const validatePassword = (password: string) => {
+    const regex =
+      /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&])[a-zA-Z0-9!@$!%*?&]{8,30}$/;
+    return setIsPasswordValid(regex.test(String(password)));
+  };
+  const validateConfirmPassword = (
+    password: string,
+    confirmPassword: string
+  ) => {
+    return setIsConfirmPasswordValid(password === confirmPassword);
+  };
   useEffect(() => {
     setIsRegisterError(false);
-    const validateEmail = (email: string) => {
-      const regex =
-        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return setIsEmailValid(regex.test(String(email).toLowerCase()));
-    };
-    const validatePassword = (password: string) => {
-      const regex =
-        /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&])[a-zA-Z0-9!@$!%*?&]{8,30}$/;
-      return setIsPasswordValid(regex.test(String(password)));
-    };
-    const validateConfirmPassword = (
-      password: string,
-      confirmPassword: string
-    ) => {
-      return setIsConfirmPasswordValid(password === confirmPassword);
-    };
     validateEmail(email);
     validatePassword(password);
     validateConfirmPassword(password, confirmPassword);
@@ -80,7 +80,7 @@ function Register() {
             setEmail(e.target.value);
           }}
         />
-        {!isEmailValid && (
+        {!isEmailValid && email.length > 1 && (
           <span className="register__form__error">
             Please enter a valid email address
           </span>

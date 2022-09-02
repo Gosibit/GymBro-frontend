@@ -20,9 +20,9 @@ function Login() {
     setIsLoginError(false);
   };
 
-  const logIn = async () => {
+  const logIn = () => {
     cleanStates();
-    const response = await axios
+    axios
       .post(process.env.REACT_APP_BE_DOMAIN + "/users/login", {
         email: email,
         password: password,
@@ -70,7 +70,9 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <span className="login__dropdown__form__forgot-password">
-              forgot password?
+              <Link to="/reset-password" className="link">
+                forgot password?
+              </Link>
             </span>
             {isLoginError && (
               <div className="login__dropdown__form__error">

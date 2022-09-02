@@ -7,6 +7,9 @@ import ProductsList from "./components/Products/Products";
 import Product from "./components/Product/Product";
 import Register from "./components/Auth/Register";
 import RegisterSuccess from "./components/Auth/RegisterSuccess";
+import ResetPassword from "./components/Auth/ResetPassword";
+import ChangePassword from "./components/Auth/ChangePassword";
+import EmailConfirmed from "./components/Auth/EmailConfirmed";
 
 function App() {
   return (
@@ -22,6 +25,15 @@ function App() {
             <Route
               path="/register-success"
               element={<RegisterSuccess />}
+            ></Route>
+            <Route path="/reset-password" element={<ResetPassword />}></Route>
+            <Route
+              path="/change-password/:token"
+              element={<ChangePassword />}
+            ></Route>
+            <Route
+              path="/auth/confirmation/:token"
+              element={<EmailConfirmed />}
             ></Route>
           </Routes>
         </div>
