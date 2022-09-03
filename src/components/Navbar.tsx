@@ -1,8 +1,8 @@
 import "../styles/Navbar/Navbar.css";
 import "../styles/Link/Link.css";
 import logo from "../files/gymbro-navbar-logo.png";
-import userIcon from "../files/user-icon.svg";
 import shoppingCartIcon from "../files/shopping-cart-icon.svg";
+import Login from "./Auth/Login";
 import SearchBar from "./SearchBar";
 import { Link, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -89,7 +89,7 @@ function Navbar() {
           </li>
         </ul>
         <SearchBar></SearchBar>
-        <img className="navbar__wrapper__user-icon" src={userIcon}></img>
+        <Login></Login>
         <img
           className="navbar__wrapper__shopping-cart-icon"
           src={shoppingCartIcon}

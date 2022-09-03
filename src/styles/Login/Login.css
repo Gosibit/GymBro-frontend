@@ -1,0 +1,81 @@
+.login {
+  position: relative;
+}
+.login__icon {
+  width: 2.8rem;
+  margin-left: 1rem;
+}
+.login__icon:hover {
+  cursor: pointer;
+}
+.login__dropdown {
+  width: 28rem;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding-bottom: 2rem;
+  background-color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  top: 4rem;
+  right: -4rem;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.login__dropdown__logo {
+  width: 18rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.login__dropdown__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.login__dropdown__form__input {
+  width: 90%;
+  height: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+.login__dropdown__form__input:focus {
+  outline: none;
+}
+.login__dropdown__form__error {
+  margin-top: 1.5rem;
+  width: 100%;
+  color: red;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.login__dropdown__form__forgot-password {
+  font-size: 1.2rem;
+  position: absolute;
+  top: 12.5rem;
+  right: 3rem;
+  color: #999;
+  text-decoration: underline;
+}
+.login__dropdown__form__button {
+  width: 90%;
+  height: 2.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #00a8ff;
+  margin-top: 2rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.login__dropdown__form__button:hover {
+  background-color: #049de9;
+}
+.login__dropdown__signup {
+  margin-top: 0.4rem;
+  font-size: 1.2rem;
+}/*# sourceMappingURL=Login.css.map */

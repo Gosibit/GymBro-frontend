@@ -1,0 +1,58 @@
+.register {
+  font-family: Koulen;
+  padding-top: 10rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+.register h1 {
+  font-size: 3rem;
+}
+.register__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+.register__form__input {
+  width: 100%;
+  height: 3rem;
+  font-size: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  margin-top: 1.3rem;
+}
+.register__form__input:focus {
+  outline: none;
+}
+.register__form__error {
+  color: red;
+  font-size: 1.6rem;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin-bottom: 0.5rem;
+}
+.register__form__button {
+  width: 100%;
+  height: 5rem;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  margin-top: 2rem;
+  color: rgb(0, 0, 0);
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.register__form__button:hover {
+  background-color: #d6d6d6;
+}
+.register__tos {
+  margin-top: 3rem;
+  width: 30%;
+  font-size: 2rem;
+}/*# sourceMappingURL=Register.css.map */
