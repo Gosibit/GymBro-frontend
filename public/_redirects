@@ -1,0 +1,2 @@
+/register-success         /                            304
+/change-password/:token         /                      301
