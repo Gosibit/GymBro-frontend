@@ -3,9 +3,12 @@ import useComponentVisible from "../../hooks/useComponentVisible";
 import "../../styles/Login/Login.css";
 import gymbroLogo from "../../files/gymbro-navbar-logo.png";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import axios from "axios";
+import { UserContext } from "../../contexts/UserContext";
+import "../../styles/Link/Link.css";
 function Login() {
+  const { user, setUser } = useContext(UserContext);
   const { ref, isComponentVisible } = useComponentVisible(false);
   const [isNotConfirmed, setIsNotConfirmed] = useState(false);
   const [isLoginError, setIsLoginError] = useState(false);
@@ -27,7 +30,8 @@ function Login() {
         email: email,
         password: password,
       })
-      .then(() => {
+      .then((res) => {
+        localStorage.setItem("accessToken", res.data.accessToken);
         window.location.href = "/";
       })
       .catch(({ response }) => {
@@ -38,6 +42,11 @@ function Login() {
         }
       });
   };
+  const logOut = () => {
+    localStorage.removeItem("accessToken");
+    setUser(null);
+    window.location.href = "/";
+  };
   useEffect(() => {
     (email !== "" || password !== "") && cleanErrors();
   }, [email, password]);
@@ -45,7 +54,7 @@ function Login() {
   return (
     <div className="login" ref={ref}>
       <img src={userIcon} alt="user icon" className="login__icon" />
-      {isComponentVisible && (
+      {isComponentVisible && !user && (
         <div className="login__dropdown">
           <img src={gymbroLogo} className="login__dropdown__logo"></img>
           <form
@@ -70,7 +79,7 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <span className="login__dropdown__form__forgot-password">
-              <Link to="/reset-password" className="link">
+              <Link to="/reset-password" className="Link">
                 forgot password?
               </Link>
             </span>
@@ -86,6 +95,7 @@ function Login() {
             )}
             <button className="login__dropdown__form__button">Log in</button>
           </form>
+
           <div className="login__dropdown__signup">
             Not a member yet?{" "}
             <Link to="/register" style={{ color: "blue" }}>
@@ -94,7 +104,21 @@ function Login() {
           </div>
         </div>
       )}
+      {isComponentVisible && user && (
+        <div className="login__dropdown">
+          <div className="login__dropdown__logged-in">
+            <h1>{user.email}</h1>
+            <button
+              className="login__dropdown__logged-in__button"
+              onClick={() => logOut()}
+            >
+              Log out
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
+
 export default Login;
