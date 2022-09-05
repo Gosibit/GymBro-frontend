@@ -10,12 +10,50 @@ import RegisterSuccess from "./components/Auth/RegisterSuccess";
 import ResetPassword from "./components/Auth/ResetPassword";
 import ChangePassword from "./components/Auth/ChangePassword";
 import EmailConfirmed from "./components/Auth/EmailConfirmed";
+import { UserContext } from "./contexts/UserContext";
+import { useEffect, useMemo, useState } from "react";
+import axios from "axios";
+
+const parseJwt = (token: string) => {
+  try {
+    return JSON.parse(atob(token.split(".")[1]));
+  } catch (e) {
+    return null;
+  }
+};
+const AuthVerify = () => {
+  const accessToken = localStorage.getItem("accessToken");
+  if (accessToken) {
+    const { exp } = parseJwt(accessToken);
+    if (exp * 1000 < Date.now()) return false;
+    else return true;
+  }
+  return false;
+};
 
 function App() {
+  const setUserRequest = async () => {
+    axios
+      .get(process.env.REACT_APP_BE_DOMAIN + "/users/me", {
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("accessToken"),
+        },
+      })
+      .then((res) => {
+        setUser(res.data.user);
+      });
+  };
+  const [user, setUser] = useState<any>(null);
+  useEffect(() => {
+    AuthVerify() && setUserRequest();
+  }, []);
+  const providerUser = useMemo(() => ({ user, setUser }), [user, setUser]);
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar></Navbar>
+        <UserContext.Provider value={providerUser}>
+          <Navbar></Navbar>
+        </UserContext.Provider>
         <div style={{ minHeight: "calc(100vh - 100px)" }}>
           <Routes>
             <Route path="/" element={<HomePage />}></Route>

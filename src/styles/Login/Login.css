@@ -78,4 +78,28 @@
 .login__dropdown__signup {
   margin-top: 0.4rem;
   font-size: 1.2rem;
+}
+.login__dropdown__logged-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.login__dropdown__logged-in h1 {
+  font-size: 3rem;
+  font-family: Koulen;
+}
+.login__dropdown__logged-in__button {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #00a8ff;
+  margin-top: 2rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.login__dropdown__logged-in__button:hover {
+  background-color: #049de9;
 }/*# sourceMappingURL=Login.css.map */
