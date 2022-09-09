@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import magnifierIcon from "../files/magnifier-icon.svg";
-import useComponentVisible from "../hooks/useComponentVisible";
-import IProduct from "../Interfaces/IProduct";
-import "../styles/SearchBar/SearchBar.css";
+import magnifierIcon from "../../files/magnifier-icon.svg";
+import useComponentVisible from "../../hooks/useComponentVisible";
+import IProduct from "../../Interfaces/IProduct";
+import "../../styles/SearchBar/SearchBar.css";
+import shoppingCartIcon from "../../files/shopping-cart-icon.svg";
+
 function SearchBar() {
   const [searchedProducts, setSearchedProducts] = useState<IProduct[]>([]);
   const { ref, isComponentVisible } = useComponentVisible(false);

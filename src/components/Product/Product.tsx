@@ -1,12 +1,19 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
-import IProduct from "../../Interfaces/IProduct";
+import { useContext, useEffect, useState } from "react";
+import IProduct, { Category } from "../../Interfaces/IProduct";
 import { useParams } from "react-router-dom";
 import "../../styles/Product/Product.css";
+import { IShoppingCartProduct, Size } from "../../Interfaces/IShoppingCart";
+import { UserContext } from "../../contexts/UserContext";
+import { ShoppingCartContext } from "../../contexts/ShoppingCartContext";
 
 function Product() {
   const [product, setProduct] = useState<IProduct>();
   const params = useParams();
+
+  const { shoppingCart, setShoppingCart } = useContext(ShoppingCartContext);
+  const { user, setUser } = useContext(UserContext);
+  const [size, setSize] = useState<Size>();
 
   useEffect(() => {
     const searchProduct = async () => {
@@ -22,6 +29,7 @@ function Product() {
       }
     };
     searchProduct();
+    setSize(Size.S);
   }, [params]);
   return (
     <div className="product">
@@ -43,20 +51,33 @@ function Product() {
             </p>
           </div>
           <form className="product__wrapper__form">
-            <label htmlFor="size">Size</label>
+           { product.category!==Category.ACCESORIES &&(
             <select
               id="Size"
               name="Size"
               className="product__wrapper__form__select"
+              onChange={(e) =>
+                {
+                  Object.values(Size).forEach((size) => (
+                    size === e.target.value && setSize(size)
+                ))}
+              }
+              value={size}
             >
-              <option value="S">S</option>
-              <option value="M">M</option>
-              <option value="L">L</option>
-              <option value="XL">XL</option>
-              <option value="XXL">XXL</option>
+              {Object.values(Size).map((size) => (
+                <option value={size}>{size}</option>
+              ))}
             </select>
-
-            <button type="submit" className="product__wrapper__form__button">
+           )
+           }
+            <button
+              type="submit"
+              className="product__wrapper__form__button"
+              onClick={(e) => {
+                if(size) addToCart({product,size,quantity:1})
+                e.preventDefault();
+              }}
+            >
               Add to cart
             </button>
           </form>
@@ -64,6 +85,32 @@ function Product() {
       )}
     </div>
   );
+  function getHeaders() {
+   
+         return { Authorization: "Bearer " + localStorage.getItem("accessToken")}
+  }
+
+  function addToCart({ product, size, quantity }: IShoppingCartProduct) {
+    axios
+      .post(
+        process.env.REACT_APP_BE_DOMAIN + "/shopping-carts/add-to-cart",
+        {
+         shoppingCartId: shoppingCart?._id,
+          productId: product._id,
+          size: size,
+          quantity: quantity,
+        },
+        user && {
+         headers: getHeaders(),
+        }
+      )
+      .then((res) => {
+        if(!shoppingCart && !user) localStorage.setItem("shoppingCartId", res.data._id)
+        setShoppingCart(res.data);
+      })
+    
+      return
+  }
 }
 
 export default Product;

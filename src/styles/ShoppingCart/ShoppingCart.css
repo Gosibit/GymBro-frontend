@@ -1,0 +1,103 @@
+.shopping-cart {
+  position: relative;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.shopping-cart ::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 5px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.shopping-cart ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.shopping-cart ::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+.shopping-cart ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.shopping-cart__icon {
+  width: 2.8rem;
+  margin-left: 1rem;
+}
+.shopping-cart__icon:hover {
+  cursor: pointer;
+}
+.shopping-cart__counter {
+  position: absolute;
+  font-size: 1.2rem;
+  left: 0.4rem;
+  top: -0.4rem;
+  color: white;
+  background-color: orange;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shopping-cart__dropdown {
+  width: 25rem;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding-bottom: 2rem;
+  max-height: 17rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  top: 4rem;
+  right: -4rem;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.shopping-cart__dropdown h2 {
+  text-align: center;
+  line-height: 3.6rem;
+  margin-top: 1rem;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.shopping-cart__dropdown__products {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shopping-cart__dropdown__total {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.shopping-cart__dropdown__total__price {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.shopping-cart__dropdown__total__button {
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  color: white;
+  border-radius: 0.5rem;
+  background-color: #00a8ff;
+  font-weight: 600;
+}
+.shopping-cart__dropdown__total__button:hover {
+  cursor: pointer;
+  background-color: #049de9;
+}/*# sourceMappingURL=ShoppingCart.css.map */

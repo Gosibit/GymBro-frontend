@@ -1,11 +1,11 @@
-import "../styles/Navbar/Navbar.css";
-import "../styles/Link/Link.css";
-import logo from "../files/gymbro-navbar-logo.png";
-import shoppingCartIcon from "../files/shopping-cart-icon.svg";
-import Login from "./Auth/Login";
+import "../../styles/Navbar/Navbar.css";
+import "../../styles/Link/Link.css";
+import logo from "../../files/gymbro-navbar-logo.png";
+import Login from "../Auth/Login";
 import SearchBar from "./SearchBar";
 import { Link, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import ShoppingCart from "./ShoppingCart";
 
 function Navbar() {
   const categories = ["T-Shirts", "Shorts"];
@@ -90,10 +90,7 @@ function Navbar() {
         </ul>
         <SearchBar></SearchBar>
         <Login></Login>
-        <img
-          className="navbar__wrapper__shopping-cart-icon"
-          src={shoppingCartIcon}
-        ></img>
+        <ShoppingCart></ShoppingCart>
       </div>
     </nav>
   );
