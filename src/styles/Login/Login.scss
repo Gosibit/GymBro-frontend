@@ -79,6 +79,10 @@
     }
     &__logged-in {
       display: flex;
+      
+      max-width: 26rem;
+      text-align: center;
+      line-break: anywhere;
       flex-direction: column;
       justify-content: center;
 
