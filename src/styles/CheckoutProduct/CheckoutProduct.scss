@@ -1,0 +1,32 @@
+.checkout-product{
+    display:flex;
+    font-size:3rem;
+    font-family: Koulen;
+    &__image{
+        width:20rem;
+        height:28rem;
+        margin-right:2rem;
+    }
+    &__info{
+        display:flex;
+        flex-direction:column;
+        justify-content: space-between;
+        &__title{
+            font-size:3.5rem;
+            font-weight: 600;
+            line-height: 3rem;
+        }
+        &__price{
+            font-size:2.5rem;
+            font-weight: 600;
+        }
+        &__rating{
+            display:flex;
+            &__star{
+                font-size:2.5rem;
+                color: #f0c14b;
+            }
+        }
+    }
+    padding-bottom:2rem;
+}
