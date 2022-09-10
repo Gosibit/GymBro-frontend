@@ -20,6 +20,7 @@ import axios from "axios";
 import Checkout from "./components/checkout/Checkout";
 import Sales from "./components/Navbar/Sales";
 import AboutUs from "./components/Navbar/AboutUs";
+import PaymentEffect from "./components/PaymentEffect/PaymentEffect";
 
 const parseJwt = (token: string) => {
   try {
@@ -125,6 +126,8 @@ function App() {
             ></Route>
             <Route path="/sales" element={<Sales/>}></Route>
             <Route path="/about-us" element={<AboutUs/>}></Route>
+            <Route path="/payment-accepted" element={<PaymentEffect isSuccessfull={true}/>}></Route>
+            <Route path="/payment-canceled" element={<PaymentEffect isSuccessfull={false}/>}></Route>
 
           </Routes>
         </div>
