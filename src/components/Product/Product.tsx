@@ -6,6 +6,7 @@ import "../../styles/Product/Product.css";
 import { IShoppingCartProduct, Size } from "../../Interfaces/IShoppingCart";
 import { UserContext } from "../../contexts/UserContext";
 import { ShoppingCartContext } from "../../contexts/ShoppingCartContext";
+import Loader from "../Loader/Loader";
 
 function Product() {
   const [product, setProduct] = useState<IProduct>();
@@ -33,7 +34,7 @@ function Product() {
   }, [params]);
   return (
     <div className="product">
-      {product && (
+      {product ? (
         <div className="product__wrapper"  >
           <img
             src={product.imageUrls.original.url}
@@ -82,7 +83,10 @@ function Product() {
             </button>
           </form>
         </div>
-      )}
+      ):(
+        <Loader/>
+      )  
+      }
     </div>
   );
   function getHeaders() {
