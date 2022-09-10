@@ -34,7 +34,7 @@ function Product() {
   return (
     <div className="product">
       {product && (
-        <div className="product__wrapper">
+        <div className="product__wrapper"  >
           <img
             src={product.imageUrls.original.url}
             alt={product.title}
@@ -65,7 +65,7 @@ function Product() {
               value={size}
             >
               {Object.values(Size).map((size) => (
-                <option value={size}>{size}</option>
+                <option key={size} value={size}>{size}</option>
               ))}
             </select>
            )

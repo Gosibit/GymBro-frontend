@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Category } from "../../Interfaces/IProduct";
 import { IShoppingCartProduct } from "../../Interfaces/IShoppingCart";
 import "../../styles/CheckoutProduct/CheckoutProduct.css";
 
@@ -22,7 +23,9 @@ function CheckoutProduct(SCproduct: IShoppingCartProduct) {
                     <small>$</small>
                     <strong>{price}</strong>
                 </p>
-                <p className="checkout-product__info__size">Size: {size}</p>
+                {product.category !== Category.ACCESORIES && (
+                <p className="checkout-product__info__size"> Size: {size}</p>
+                )}
                 <p className="checkout-product__info__quantity">Quantity: {quantity}</p>
             </div>
         </div>

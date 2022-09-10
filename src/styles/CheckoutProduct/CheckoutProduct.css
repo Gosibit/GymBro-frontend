@@ -2,31 +2,23 @@
   display: flex;
   font-size: 3rem;
   font-family: Koulen;
-  padding-bottom: 2rem;
+  justify-content: space-between;
+  border-bottom: #f2f2f2 2px solid;
+  margin-bottom: 2rem;
 }
 .checkout-product__image {
-  width: 20rem;
-  height: 28rem;
+  width: 17rem;
+  height: 22rem;
   margin-right: 2rem;
 }
 .checkout-product__info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  width: 20rem;
+  font-size: 2.5rem;
 }
 .checkout-product__info__title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 600;
   line-height: 3rem;
-}
-.checkout-product__info__price {
-  font-size: 2.5rem;
-  font-weight: 600;
-}
-.checkout-product__info__rating {
-  display: flex;
-}
-.checkout-product__info__rating__star {
-  font-size: 2.5rem;
-  color: #f0c14b;
 }/*# sourceMappingURL=CheckoutProduct.css.map */

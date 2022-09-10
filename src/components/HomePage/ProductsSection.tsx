@@ -4,7 +4,7 @@ import ProductPreview from "./ProductPreview";
 function ProductsSection(products: IProduct[], title: string) {
   return (
     <section className="products-section">
-      <h2>BESTSELLERS</h2>
+      <h2>title</h2>
       <div className="products-section__wrapper">
         {Object.values(products).map((product: IProduct) => {
           return (

@@ -105,4 +105,13 @@
 }
 .login__dropdown__logged-in__button:hover {
   background-color: #049de9;
+}
+
+@media all and (max-width: 1100px) {
+  .login__icon {
+    margin: 0;
+  }
+  .login__dropdown {
+    right: -15rem;
+  }
 }/*# sourceMappingURL=Login.css.map */

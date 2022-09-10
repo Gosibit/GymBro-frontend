@@ -14,9 +14,12 @@ import { UserContext } from "./contexts/UserContext";
 import { ShoppingCartContext } from "./contexts/ShoppingCartContext";
 import { useEffect, useMemo, useState } from "react";
 import ScrollToTop from "./hooks/ScrollToTop";
+import "./styles/WrapperForFooter/WrapperForFooter.css";
 
 import axios from "axios";
 import Checkout from "./components/checkout/Checkout";
+import Sales from "./components/Navbar/Sales";
+import AboutUs from "./components/Navbar/AboutUs";
 
 const parseJwt = (token: string) => {
   try {
@@ -102,7 +105,7 @@ function App() {
             </Routes>
           </ShoppingCartContext.Provider>
         </UserContext.Provider>
-        <div style={{ minHeight: "calc(100vh - 160px)" }}>
+        <div className="wrapper-for-footer">
           <Routes>
             <Route path="/" element={<HomePage />}></Route>
             <Route path="/products" element={<ProductsList />}></Route>
@@ -120,6 +123,9 @@ function App() {
               path="/auth/confirmation/:token"
               element={<EmailConfirmed />}
             ></Route>
+            <Route path="/sales" element={<Sales/>}></Route>
+            <Route path="/about-us" element={<AboutUs/>}></Route>
+
           </Routes>
         </div>
         <Footer></Footer>

@@ -30,9 +30,11 @@ function ShoppingCart() {
           shoppingCart.products &&
           shoppingCart.products.length > 0 ? (
             <><div className="shopping-cart__dropdown__products">
-                {shoppingCart.products.map((SCproduct) => (
-                  <ShoppingCartProduct {...SCproduct}></ShoppingCartProduct>
-                ))}
+                {shoppingCart.products.map((SCproduct) => {
+          
+                  const { product, size } = SCproduct;
+                  return <ShoppingCartProduct key={product._id + size} {...SCproduct}></ShoppingCartProduct>
+                })}
               </div><div className="shopping-cart__dropdown__total">
                   <p className="shopping-cart__dropdown__total__price">
                     Total: {shoppingCart.total}$

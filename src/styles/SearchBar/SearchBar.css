@@ -1,7 +1,7 @@
 .search-bar {
   display: flex;
   position: relative;
-  width: 19rem;
+  width: 70%;
   height: 2.2rem;
   padding-left: 1rem;
   margin-bottom: 0.8rem;
@@ -27,7 +27,7 @@
 .search-bar__input {
   border: 0.1rem solid black;
   border-radius: 4px;
-  width: 100%;
+  width: 150%;
   height: 2.5rem;
   border-radius: 5px;
 }
@@ -37,7 +37,7 @@
   background: none;
   border: none;
   top: 0.4rem;
-  left: 17rem;
+  right: 0.4rem;
 }
 .search-bar__button__magnifier-icon {
   width: 1.8rem;
@@ -48,7 +48,8 @@
   flex-direction: column;
   min-height: 7rem;
   max-height: 12rem;
-  width: 130%;
+  line-height: 2rem;
+  width: 120%;
   overflow-y: auto;
   overflow-x: hidden;
   position: absolute;
@@ -78,4 +79,11 @@
 .search-bar__items__no-products {
   margin-left: 1rem;
   color: grey;
+}
+
+@media all and (max-width: 1100px) {
+  .search-bar {
+    margin-top: 1rem;
+    width: 50%;
+  }
 }/*# sourceMappingURL=SearchBar.css.map */
