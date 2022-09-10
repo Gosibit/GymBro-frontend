@@ -20,6 +20,7 @@
         width: 100%;
         margin-top: 1rem;
         justify-content: space-between;
+        text-align: center;
         &__title {
           font-size: 3.5rem;
           margin-left: 3rem;
@@ -28,11 +29,7 @@
         &__price {
           font-size: 3rem;
           font-family: Koulen;
-          &::after {
-            content: "$";
-            padding-left: 4px;
-            margin-right: 6rem;
-          }
+          margin-right: 2rem;
         }
         &__button {
           width: 100%;
@@ -67,7 +64,8 @@
           }
           &__price {
             display:flex;
-            margin-left:8rem;
+            justify-content: center;
+            margin:0;
           }
         }
         &__image {

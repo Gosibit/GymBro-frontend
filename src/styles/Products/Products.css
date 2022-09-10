@@ -22,6 +22,7 @@
   width: 100%;
   margin-top: 1rem;
   justify-content: space-between;
+  text-align: center;
 }
 .products__list__item__info__title {
   font-size: 3.5rem;
@@ -31,11 +32,7 @@
 .products__list__item__info__price {
   font-size: 3rem;
   font-family: Koulen;
-}
-.products__list__item__info__price::after {
-  content: "$";
-  padding-left: 4px;
-  margin-right: 6rem;
+  margin-right: 2rem;
 }
 .products__list__item__info__button {
   width: 100%;
@@ -67,7 +64,8 @@
   }
   .products__list__item__info__price {
     display: flex;
-    margin-left: 8rem;
+    justify-content: center;
+    margin: 0;
   }
   .products__list__item__image {
     width: 100%;

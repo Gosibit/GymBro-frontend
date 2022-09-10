@@ -6,7 +6,11 @@ import { Link } from "react-router-dom";
 import "../../styles/ShoppingCart/ShoppingCart.css";
 import ShoppingCartProduct from "./ShoppingCartProduct";
 
-function ShoppingCart() {
+interface ShoppingCartProps {
+  navbarSetIsOpen:React.Dispatch<React.SetStateAction<boolean>>
+}
+
+function ShoppingCart({navbarSetIsOpen}: ShoppingCartProps)  {
   const { ref, isComponentVisible, setIsComponentVisible } =
     useComponentVisible(false);
   const { shoppingCart, setShoppingCart } = useContext(ShoppingCartContext);
@@ -40,7 +44,7 @@ function ShoppingCart() {
                     Total: {shoppingCart.total}$
                   </p>
                   <Link to="/checkout">
-                    <button className="shopping-cart__dropdown__total__button">
+                    <button className="shopping-cart__dropdown__total__button" onClick={()=>navbarSetIsOpen(false)}>
                       Checkout
                     </button>
                   </Link>

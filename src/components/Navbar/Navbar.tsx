@@ -95,7 +95,7 @@ function Navbar() {
         <div className="navbar__wrapper__functionalities">
         <SearchBar></SearchBar>
         <Login></Login>
-        <ShoppingCart></ShoppingCart>
+        <ShoppingCart navbarSetIsOpen={setIsOpen}></ShoppingCart>
         </div>
       </div>
       {/*//////////////////////////////////MOBILE VERSION////////////////////////////////////////////  */}
@@ -156,7 +156,7 @@ function Navbar() {
         </ul>
         <div className="navbar__mobile__functionalities">
         <Login></Login>
-        <ShoppingCart></ShoppingCart>
+        <ShoppingCart navbarSetIsOpen={setIsOpen}></ShoppingCart>
         </div>
         <SearchBar></SearchBar>
       </div>)}

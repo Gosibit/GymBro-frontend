@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import IProduct, { Category } from "../../Interfaces/IProduct";
 import LandscapeImage from "./LandscapeImage";
 import sunglassesLandscape from "../../files/sunglasses-landscape.png";
+import Loader from "../Loader/Loader";
+
 
 function Main() {
   const [bestsellers, setBestsellers] = useState<IProduct[]>([]);
@@ -31,12 +33,15 @@ function Main() {
 
   return (
     <main className="main">
-      {bestsellers.length > 0 && (
-        <ProductsSection {...bestsellers} ></ProductsSection>
-      )}
+      {bestsellers.length > 0 ? (
+        <ProductsSection products={bestsellers} title="Bestsellers"></ProductsSection>
+      ): ( 
+        <Loader />
+      )
+        }
       <LandscapeImage landscapeImage={sunglassesLandscape}></LandscapeImage>
-      {summerItems.length > 0 && (
-        <ProductsSection {...summerItems}></ProductsSection>
+      {summerItems.length > 0  && (
+        <ProductsSection products={summerItems} title="Summertime"></ProductsSection>
       )}
     </main>
   );

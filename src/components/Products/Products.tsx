@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import IProduct from "../../Interfaces/IProduct";
 import "../../styles/Products/Products.css";
+import Loader from "../Loader/Loader";
 
 function ProductsList() {
   const [searchParams, setSearchParams] = useSearchParams({});
@@ -37,7 +38,7 @@ function ProductsList() {
   return (
     <div className="products">
       <ul className="products__list">
-        {products.map((product: IProduct) => (
+        {products && products.length>0 ? (products.map((product: IProduct) => (
           <Link
             to={`/products/${product._id}`}
             className="Link"
@@ -54,12 +55,15 @@ function ProductsList() {
                   {product.title}
                 </h2>
                 <div className="products__list__item__info__price">
-                  <p>{product.price}</p>
+                  <p>{product.price}$</p>
                 </div>
               </div>
             </li>
           </Link>
-        ))}
+        ))):
+        (
+          <Loader />
+        )}
       </ul>
     </div>
   );
