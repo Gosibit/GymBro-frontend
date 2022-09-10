@@ -18,5 +18,5 @@ export interface IShoppingCartProduct {
 export interface IShoppingCart {
   _id?: string;
   products?: IShoppingCartProduct[];
-  total?: number;
+  total?: string;
 }

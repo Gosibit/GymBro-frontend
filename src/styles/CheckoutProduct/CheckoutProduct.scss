@@ -2,31 +2,27 @@
     display:flex;
     font-size:3rem;
     font-family: Koulen;
+   
     &__image{
-        width:20rem;
-        height:28rem;
+        width:17rem;
+        height:22rem;
         margin-right:2rem;
     }
+    justify-content: space-between;
     &__info{
         display:flex;
         flex-direction:column;
-        justify-content: space-between;
+        width:20rem;
+        font-size:2.5rem;
         &__title{
-            font-size:3.5rem;
+            font-size:3rem;
             font-weight: 600;
             line-height: 3rem;
         }
-        &__price{
-            font-size:2.5rem;
-            font-weight: 600;
-        }
-        &__rating{
-            display:flex;
-            &__star{
-                font-size:2.5rem;
-                color: #f0c14b;
-            }
-        }
+        
+        
+    
     }
-    padding-bottom:2rem;
+    border-bottom: #f2f2f2 2px solid;
+    margin-bottom:2rem;
 }

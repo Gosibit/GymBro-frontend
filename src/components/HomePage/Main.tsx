@@ -32,7 +32,7 @@ function Main() {
   return (
     <main className="main">
       {bestsellers.length > 0 && (
-        <ProductsSection {...bestsellers}></ProductsSection>
+        <ProductsSection {...bestsellers} ></ProductsSection>
       )}
       <LandscapeImage landscapeImage={sunglassesLandscape}></LandscapeImage>
       {summerItems.length > 0 && (

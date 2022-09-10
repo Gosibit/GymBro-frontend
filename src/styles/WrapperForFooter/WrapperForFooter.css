@@ -1,0 +1,9 @@
+.wrapper-for-footer {
+  min-height: calc(100vh - 160px);
+}
+
+@media all and (max-width: 1100px) {
+  .wrapper-for-footer {
+    min-height: 100vh;
+  }
+}/*# sourceMappingURL=WrapperForFooter.css.map */

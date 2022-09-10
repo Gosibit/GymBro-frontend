@@ -54,3 +54,13 @@
     font-size: 2rem;
   }
 }
+@media all and (max-width:1100px) {
+  .register {
+    &__form {
+      width: 80%;
+    }
+    &__tos {
+      width: 80%;
+    }
+  }
+}

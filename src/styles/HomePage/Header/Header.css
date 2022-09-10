@@ -2,12 +2,13 @@
   display: flex;
   padding-top: 9rem;
   flex-direction: column;
+  width: 100%;
   align-items: center;
 }
 .first-header__wrapper {
   width: 116rem;
   height: 30rem;
-  background-size: 116rem 30rem;
+  background-size: 100% no-repeat;
   background-image: url("../../../files/new-t-shirts.png");
   display: flex;
   justify-content: center;
@@ -15,4 +16,11 @@
   font-family: Khand;
   font-weight: regular;
   color: white;
+}
+
+@media all and (max-width: 1100px) {
+  .first-header__wrapper {
+    width: 100%;
+    font-size: 3rem;
+  }
 }/*# sourceMappingURL=Header.css.map */

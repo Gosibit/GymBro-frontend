@@ -22,7 +22,7 @@ function ShoppingCartProduct(SCproduct: IShoppingCartProduct) {
   const { user, setUser } = useContext(UserContext);
 
   return (
-    <div className="shopping-cart-product" key={product._id}>
+    <div className="shopping-cart-product">
       <Link
         to={"/products/" + product._id}
         style={linkStyle}

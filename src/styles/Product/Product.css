@@ -82,4 +82,37 @@
 .product__wrapper__form__button:hover {
   background-color: #acabab;
   transition-duration: 0.3s;
+}
+
+@media all and (max-width: 1100px) {
+  .product {
+    margin-bottom: 1rem;
+  }
+  .product__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product__wrapper__image {
+    width: 100%;
+    max-height: 100%;
+    margin-bottom: 2rem;
+  }
+  .product__wrapper__info {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  .product__wrapper__info h1 {
+    font-size: 5rem;
+  }
+  .product__wrapper__info h2 {
+    font-size: 3rem;
+  }
+  .product__wrapper__info__price {
+    font-size: 3rem;
+  }
+  .product__wrapper__form {
+    width: 100%;
+    font-size: 3rem;
+  }
 }/*# sourceMappingURL=Product.css.map */

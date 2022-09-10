@@ -109,3 +109,14 @@
     }
   }
 }
+@media all and (max-width:1100px) {
+  .login{
+    &__icon{
+      margin:0;
+    }
+    &__dropdown{
+      right:-15rem;
+    
+    }
+  }
+}

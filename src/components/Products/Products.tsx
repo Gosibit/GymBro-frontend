@@ -40,10 +40,10 @@ function ProductsList() {
         {products.map((product: IProduct) => (
           <Link
             to={`/products/${product._id}`}
-            key={product._id}
             className="Link"
+            key={product._id }
           >
-            <li key={product._id} className="products__list__item">
+            <li className="products__list__item">
               <img
                 src={product.imageUrls.original.url}
                 alt={product.title}
@@ -53,9 +53,9 @@ function ProductsList() {
                 <h2 className="products__list__item__info__title">
                   {product.title}
                 </h2>
-                <p className="products__list__item__info__price">
-                  {product.price}
-                </p>
+                <div className="products__list__item__info__price">
+                  <p>{product.price}</p>
+                </div>
               </div>
             </li>
           </Link>
