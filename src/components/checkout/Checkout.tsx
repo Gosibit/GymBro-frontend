@@ -64,14 +64,18 @@ function Checkout () {
                      deliveryMethod===DeliveryMethod.FEDEX ? "checkout__wrapper__left-side__choose-method__options__option--active":
                      "checkout__wrapper__left-side__choose-method__options__option"
                      }>
-                    <img src={fedexIcon} alt="fedex" onClick={()=>{setDeliveryMethod(DeliveryMethod.FEDEX)
+                    <img src={fedexIcon} alt="fedex" onClick={()=>{
+                        setDeliveryMethod(DeliveryMethod.FEDEX)
+                        setIsError(false)
                     }} />
                 </div>
                 <div className={
                      deliveryMethod===DeliveryMethod.DHL ? "checkout__wrapper__left-side__choose-method__options__option--active":
                      "checkout__wrapper__left-side__choose-method__options__option"
                      }>
-                    <img src={dhlIcon} alt="dhl" onClick={()=>{setDeliveryMethod(DeliveryMethod.DHL)
+                    <img src={dhlIcon} alt="dhl" onClick={()=>{
+                        setDeliveryMethod(DeliveryMethod.DHL)
+                        setIsError(false)
                     }} />
                 </div>
             </div>
@@ -82,13 +86,17 @@ function Checkout () {
             <div className={paymentMethod===PaymentMethod.ALIPAY ? "checkout__wrapper__left-side__choose-method__options__option--active":
                      "checkout__wrapper__left-side__choose-method__options__option"
                      }>
-                    <img src={cardIcon} alt="ALIPAY" onClick={()=>{setPaymentMethod(PaymentMethod.ALIPAY)
+                    <img src={cardIcon} alt="ALIPAY" onClick={()=>{
+                        setPaymentMethod(PaymentMethod.ALIPAY)
+                        setIsError(false)
                     }} />
                          </div>
                 <div className={paymentMethod===PaymentMethod.CARD ? "checkout__wrapper__left-side__choose-method__options__option--active":
                      "checkout__wrapper__left-side__choose-method__options__option"
                      }>
-                    <img src={alipayIcon} alt="credit card" onClick={()=>{setPaymentMethod(PaymentMethod.CARD)
+                    <img src={alipayIcon} alt="credit card" onClick={()=>{
+                        setPaymentMethod(PaymentMethod.CARD)
+                        setIsError(false)
                     }} />
                 </div>
                 </div>
@@ -112,9 +120,10 @@ function Checkout () {
                     </div>
                     <div className="checkout__wrapper__right-side__summary__total-price">Total Price: {" " + totalPrice.toFixed(2)}$</div>
                     <button className="checkout__wrapper__right-side__summary__button" onClick={()=>{
-                        if(paymentMethod===PaymentMethod.NULL || deliveryMethod===DeliveryMethod.NULL)setIsError(true)
+                        if(paymentMethod===PaymentMethod.NULL || deliveryMethod===DeliveryMethod.NULL) setIsError(true)
                         else checkout()
                     }}>Order</button>
+                    { isError && <div style={{color:"red",fontSize:"2rem",textAlign:'center'}}>Please select payment and delivery method</div>}
                     </div>
             </div>
     </div>
