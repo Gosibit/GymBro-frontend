@@ -89,5 +89,9 @@
   .search-bar{
     margin-top:1rem;
     width:50%;
+    &__items{
+      width: 100%;
+      right: 0%;
+    }
   }
 }
