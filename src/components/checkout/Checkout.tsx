@@ -45,7 +45,7 @@ function Checkout () {
             deliveryMethod: deliveryMethod,
             shoppingCartId: shoppingCart._id
         }).then((res) => {
-            setShoppingCart(res.data);
+            setShoppingCart(res.data.shoppingCart);
             window.location.href = res.data.url
         })
             

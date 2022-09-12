@@ -3,6 +3,9 @@
   height: 100vh;
   position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   background: white url(../../files/gymbro-loading.gif) center no-repeat;
   z-index: 1;
 }/*# sourceMappingURL=Loader.css.map */

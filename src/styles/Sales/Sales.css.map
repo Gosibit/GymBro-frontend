@@ -1,1 +1,1 @@
-{"version":3,"sources":["Sales.scss","Sales.css"],"names":[],"mappings":"AAAA;EACI,kBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;ACCJ;ADCQ;EACI,eAAA;EACA,gBAAA;EACA,kBAAA;EACA,mBAAA;ACCZ;ADCQ;EACI,eAAA;EACA,gBAAA;EACA,kBAAA;EACA,mBAAA;ACCZ","file":"Sales.css"}
+{"version":3,"sources":["Sales.scss","Sales.css"],"names":[],"mappings":"AAAA;EACI,kBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;ACCJ;ADCQ;EACI,eAAA;EACA,gBAAA;EACA,kBAAA;EACA,mBAAA;ACCZ;ADCQ;EACI,iBAAA;EACA,gBAAA;EACA,kBAAA;EACA,mBAAA;ACCZ","file":"Sales.css"}
